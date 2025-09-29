@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | My Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+   <header>
+        <section class="head">
+            <img src="logo.png" width="110px" height="100px">
+        </section>
+
+        <nav class="op">
+            <a href="index.html">Home</a>
+            <a href="port.html">My Portfolio</a>
+        </nav>
+        
+    </header>
+
+    <main>
+
+         <p class="title"><b>QUIZZES</b></p>
+
+        <div class="projects">
+            <div class="box" onclick="openPopup('Quiz 1')">
+                <p>Quiz 1</p>
+            </div>
+            <div class="box" onclick="openPopup('Quiz 2')">
+                <p>Quiz 2</p>
+            </div>
+            <div class="box" onclick="openPopup('Quiz 3')">
+                <p>Quiz 3</p>
+            </div>
+        </div>
+
+         <p class="title"><b>ACTIVITIES</b></p>
+
+        <div class="projects">
+            <div class="box" onclick="openPopup('Activity 1')">
+                <p>Activity 1</p>
+            </div>
+            <div class="box" onclick="openPopup('Activity 2')">
+                <p>Activity 2</p>
+            </div>
+            <div class="box" onclick="openPopup('Activity 3')">
+                <p>Activity 3</p>
+            </div>
+        </div>
+
+         <p class="title"><b>EXAMINATIONS</b></p>
+
+        <div class="projects">
+            <div class="box" onclick="openPopup('Midterm Exam')">
+                <p>Midterm Exam</p>
+            </div>
+            <div class="box" onclick="openPopup('Final Exam')">
+                <p>Final Exam</p>
+            </div>
+            
+
+
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <h2 id="popup-title"></h2>
+                <img id="popup-img">
+            </div>
+        </div>
+    </main>
+
+    <script>
+
+        function openPopup(title, imgSrc) {
+            document.getElementById("popup-title").innerText = title;
+            document.getElementById("popup-img").src = imgSrc;
+            document.getElementById("popup").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+
+    <footer>
+        <p>E-mail: stephanie.librado@cvsu.edu.ph</p>
+    </footer>
+
+
+</body>
+</html>
